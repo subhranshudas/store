@@ -1,0 +1,19 @@
+<div class="container-fluid details">
+
+  <div class="row">
+      <div class="col-sm-6 col-md-3">
+        <img class="product-image">
+        <div class="cart-btn btn-success btn-lg" ng-show="!prod.product.isAdded" ng-click="prod.addProduct(prod.product)">
+          <span class="glyphicon glyphicon-plus-sign"></span>Add To Cart
+        </div>
+        <div class="cart-btn btn-warning btn-lg" ng-show="prod.product.isAdded" ng-click="prod.removeProduct(prod.product)">
+          <span class="glyphicon glyphicon-minus-sign"></span>Remove From Cart
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-9">
+        <h3>{{prod.product.name}}</h3>
+        <p>{{ prod.product.price | currency}}</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue vehicula aliquam. Curabitur egestas tempor sapien ut pretium. Ut ac leo rutrum, dapibus ligula eu, feugiat mauris. Pellentesque a lorem non elit tincidunt feugiat at sit amet eros. Phasellus fermentum nisi eget orci maximus rutrum.</p>
+      </div>
+  </div>
+</div>

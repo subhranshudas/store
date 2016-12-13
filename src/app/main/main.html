@@ -1,0 +1,21 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-6 col-md-3" ng-repeat="product in main.products">
+      <div class="thumbnail">
+        <img class="productImg" title="{{ product.name }}" ng-click="main.goToProducts(product)">
+        <div class="prodDesc">
+            <h4 ng-click="main.goToProducts(product)">{{ product.name }}</h4>
+            <p>{{ product.price | currency}}</p>
+        </div>
+        <div class="thumbnail-add-to-cart">
+            <span class="glyphicon glyphicon-shopping-cart"
+                  ng-class="{'added':product.isAdded}"
+                  ng-click="main.modifyProducts($index)">
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

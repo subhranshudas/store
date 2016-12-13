@@ -1,0 +1,18 @@
+.cartBar{
+  margin-top:15px;
+  margin-right: 10px;
+  color:#fff;
+  .cart-logo{
+    cursor: pointer;
+  }
+  .cart-contents{
+    display: none;
+    position: absolute;
+    border: 2px dashed;
+    background: #222;
+    opacity:0.8;
+    right: 25px;
+    padding: 10px;
+  }
+  .cart-contents.open{display:block!important;}
+}

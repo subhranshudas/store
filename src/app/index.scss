@@ -1,0 +1,87 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+  position: relative;
+
+  img.productImg{
+    width:200px;
+    height:100px;
+  }
+}
+.productImg, .prodDesc h4{cursor:pointer}
+.prodDesc{
+  padding:5px 5px 5px 10px;
+}
+.thumbnail-add-to-cart{
+  position: absolute;
+  right:10px;
+  bottom: 0;
+  font-size: 2em;
+  span.glyphicon-shopping-cart{
+    color:#ccc;
+    cursor: pointer;
+  }
+  span.glyphicon-shopping-cart.added{
+    color:#333;
+    cursor: pointer;
+  }
+}
+.details{
+  .product-image{
+    height:250px;
+    width:100%;
+    border:1px solid #222;
+  }
+  .cart-btn{
+    margin:10px 0;
+    text-align: center;
+    .glyphicon{margin-right:5px;vertical-align: -2px;}
+    &:hover{cursor:pointer;}
+  }
+}
+
+.cart-view{
+  .row.item{
+    height:60px;
+    border: 1px solid #222;
+    margin: 20px 60px;
+    .thumbs{height:100%;border:1px solid;}
+    .product-name{font-size: 1.5em;margin:0;}
+    .total{font-size:1.5em;}
+    .margTop10{margin-top: 10px;}
+    .margTop15{margin-top: 15px;}
+    .glyphicon-trash{cursor:pointer;}
+  }
+  .buy-btn{margin-right:60px;}
+  .purchased-items{
+    .item{margin-left:10px;}
+  }
+}
+
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

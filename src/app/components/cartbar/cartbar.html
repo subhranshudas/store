@@ -1,0 +1,13 @@
+<div class="cartBar">
+  <div class="cart-logo" ui-sref="cart">
+    <span class="glyphicon glyphicon-shopping-cart"></span>
+    <span>{{vm.cartList.length}}</span>
+  </div>
+  <div class="cart-contents">
+    <p ng-repeat="item in vm.cartList" ng-if="vm.cartList.length">
+      <span>{{item.name}}</span><span>{{item.price | currency}}</span>
+    </p>
+    <button ui-sref="cart" class="btn btn-success" ng-if="vm.cartList.length">Checkout</button>
+    <p ng-if="!vm.cartList.length">Add Item to Cart!</p>
+  </div>
+</div>

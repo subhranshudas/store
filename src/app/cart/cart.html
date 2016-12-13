@@ -1,0 +1,39 @@
+<div class="container-fluid cart-view">
+
+  <h2>Your Cart</h2>
+  <p ng-if="(cart.cartItems.length === 0)">Cart is empty!</p>
+  <div class="row item"  ng-repeat="ci in cart.cartItems" ng-if="cart.purchasedItems.length === 0">
+    <div class="col-md-1 thumbs">
+      <img/>
+    </div>
+    <div class="col-md-5">
+      <p class="product-name">{{ci.name}}</p>
+      <p>{{ci.price | currency}}</p>
+    </div>
+    <div class="col-md-3 margTop10">
+      <span class="total">{{ci.price*ci.num | currency}}</span>
+    </div>
+    <div class="col-md-3 margTop15">
+      <span><input type="number" name="quantity" min="1" ng-model="ci.num" ng-change="cart.modifyCart(ci)"></span>
+      <span class="glyphicon glyphicon-trash" ng-click="cart.removeProduct($index)"></span>
+    </div>
+  </div>
+  <button class="btn btn-success btn-lg pull-right buy-btn" ng-if="cart.cartItems.length && cart.purchasedItems.length === 0" ng-click="cart.buyStuff()">BUY</button>
+
+  <div class="panel panel-primary purchased-items" ng-if="cart.purchasedItems.length">
+    <div class="panel-heading">
+      <h3 class="panel-title">Purchase Summary!!</h3>
+    </div>
+    <div class="panel-body">
+      <p ng-repeat="pi in cart.purchasedItems">
+        <span class="item item-name">{{pi.name}}</span>
+        <span class="item item-price">{{pi.price | currency}}</span>
+        <span class="item item-quantity">{{pi.num}}</span>
+      </p>
+      <div class="alert alert-success" role="alert">
+        <p>Total: {{cart.grandTotal | currency}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
